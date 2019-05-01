@@ -25,6 +25,7 @@ class Footer extends Component {
               style={{ color: "#fff" }}
               href="//portfolio.nepalihangout.com"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Ram Lamichhane{" "}
             </a>{" "}

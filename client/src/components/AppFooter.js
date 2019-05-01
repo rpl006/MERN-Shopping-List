@@ -20,7 +20,15 @@ class Footer extends Component {
         </div>
         <div className="bg-info pt-1 pb-1">
           <h6 className="text-white mt-3 mb-3">
-            Copyright © 2019. All rights reserved.
+            Copyright ©{" "}
+            <a
+              style={{ color: "#fff" }}
+              href="//portfolio.nepalihangout.com"
+              target="_blank"
+            >
+              Ram Lamichhane{" "}
+            </a>{" "}
+            2019. All rights reserved.
           </h6>
         </div>
       </div>

@@ -42,4 +42,4 @@ Ram Lamichhane
 
 ### Credit
 
-Brad Traversy Tutorials
+Brad Traversy

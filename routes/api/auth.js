@@ -24,33 +24,29 @@ router.post("/", (req, res) => {
   User.findOne({ email: email }).then(user => {
     if (!user)
       return res.status(400).json({
-        msg: "User Does not Exist."
+        msg: "User Does Not Exist."
       });
 
-    //Create salt & hash
-    bcrypt.genSalt(10, (err, salt) => {
-      bcrypt.hash(newUser.password, salt, (err, hash) => {
-        if (err) throw err;
-        newUser.password = hash;
-        newUser.save().then(user => {
-          jwt.sign(
-            { id: user.id },
-            config.get("jwtSecret"),
-            { expiresIn: 3600 },
-            (err, token) => {
-              if (err) throw err;
-              res.json({
-                token: token,
-                user: {
-                  id: user.id,
-                  name: user.name,
-                  emaill: user.email
-                }
-              });
+    //Validate Password
+    bcrypt.compare(password, user.password).then(isMatch => {
+      if (!isMatch) return res.status(400).json({ msg: "Invalid Credentials" });
+
+      jwt.sign(
+        { id: user.id },
+        config.get("jwtSecret"),
+        { expiresIn: 3600 },
+        (err, token) => {
+          if (err) throw err;
+          res.json({
+            token: token,
+            user: {
+              id: user.id,
+              name: user.name,
+              emaill: user.email
             }
-          );
-        });
-      });
+          });
+        }
+      );
     });
   });
 });

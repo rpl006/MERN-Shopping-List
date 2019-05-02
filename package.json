@@ -1,6 +1,6 @@
 {
   "name": "mern_shopping_list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shoppint List Built with MERN stack",
   "main": "server.js",
   "scripts": {

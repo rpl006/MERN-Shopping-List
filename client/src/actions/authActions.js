@@ -4,8 +4,6 @@ import {
   USER_LOADED,
   USER_LOADING,
   AUTH_ERROR,
-  LOGIN_SUCCESS,
-  LOGIN_FAIL,
   LOGOUT_SUCCESS,
   REGISTER_SUCCESS,
   REGISTER_FAIL
@@ -62,6 +60,12 @@ export const register = ({ name, email, password }) => dispatch => {
     });
 };
 
+// Logout User
+export const logout = () => {
+  return {
+    type: LOGOUT_SUCCESS
+  };
+};
 //Setup Config Headers and Token
 
 export const tokenConfig = getState => {

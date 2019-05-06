@@ -1,7 +1,10 @@
 {
   "name": "mern_shopping_list",
   "version": "1.0.1",
-  "description": "Shoppint List Built with MERN stack",
+  "engines": {
+    "node": "10.15.3"
+  },
+  "description": "Shopping List Built with MERN stack",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",

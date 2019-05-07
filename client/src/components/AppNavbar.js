@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import Logout from "./auth/Logout";
+import LogOut from "./auth/LogOut";
 import RegisterModal from "./auth/RegisterModal";
 import LoginModal from "./auth/LoginModal";
 
@@ -39,7 +39,7 @@ class AppNavbar extends Component {
           </span>
         </NavItem>
         <NavItem>
-          <Logout />
+          <LogOut />
         </NavItem>
       </Fragment>
     );

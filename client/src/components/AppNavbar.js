@@ -13,7 +13,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import RegisterModal from "./auth/RegisterModal";
 import LoginModal from "./auth/LoginModal";
-import Logout from "./auth/Logout";
+
 class AppNavbar extends Component {
   state = {
     isOpen: false
@@ -37,9 +37,7 @@ class AppNavbar extends Component {
             <strong>{user ? `Welcome ${user.name}` : ""}</strong>
           </span>
         </NavItem>
-        <NavItem>
-          <Logout />
-        </NavItem>
+        <NavItem>Logout</NavItem>
       </Fragment>
     );
     const guestLinks = (

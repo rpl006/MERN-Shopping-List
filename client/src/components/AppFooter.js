@@ -23,7 +23,7 @@ class Footer extends Component {
             Copyright ©{" "}
             <a
               style={{ color: "#fff" }}
-              href="//portfolio.nepalihangout.com"
+              href="https://frosty-haibt-2b32c1.netlify.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
